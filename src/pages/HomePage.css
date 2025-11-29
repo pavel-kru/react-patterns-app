@@ -1,0 +1,117 @@
+.home-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-dark-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.controls {
+  margin: 2rem 0;
+}
+
+.search-box {
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+}
+  border: 2px solid var(--bg-dark-tertiary);
+  border-radius: 0.75rem;
+  background-color: var(--bg-dark-secondary);
+  color: var(--text-dark);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.category-filters {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-btn {
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--bg-dark-tertiary);
+  background-color: var(--bg-dark-secondary);
+  color: var(--text-dark);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.category-btn.active {
+  background-color: var(--primary-color);
+}
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.patterns-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.pattern-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.pattern-link:hover {
+  transform: translateY(-4px);
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-dark-secondary);
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .patterns-grid {
+    grid-template-columns: 1fr;
+  }
+}

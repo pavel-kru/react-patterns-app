@@ -1,0 +1,126 @@
+.pattern-detail {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.back-link:hover {
+  transform: translateX(-4px);
+}
+
+.detail-header {
+  margin-bottom: 3rem;
+}
+
+.detail-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.detail-category {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.detail-difficulty {
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.detail-difficulty.beginner {
+  background-color: rgba(16, 185, 129, 0.2);
+}
+  color: var(--success-color);
+}
+
+.detail-difficulty.intermediate {
+  background-color: rgba(245, 158, 11, 0.2);
+  color: var(--warning-color);
+}
+
+.detail-difficulty.advanced {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: var(--danger-color);
+}
+
+.detail-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+.detail-description {
+  font-size: 1.25rem;
+  color: var(--text-dark-secondary);
+  line-height: 1.6;
+}
+
+.detail-section {
+  margin-bottom: 3rem;
+}
+
+.detail-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-dark);
+}
+
+.explanation,
+.use-case {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-dark-secondary);
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--bg-dark-tertiary);
+}
+
+.nav-btn {
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  border: 2px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.pattern-not-found {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .detail-title {
+    font-size: 2rem;
+  }
+  
+  .navigation-buttons {
+    flex-direction: column;
+  }
+}

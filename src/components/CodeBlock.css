@@ -1,0 +1,36 @@
+.code-block {
+  background-color: #1e293b;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 2px solid var(--bg-dark-tertiary);
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+.code-block code {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Scrollbar styling */
+.code-block pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.code-block pre::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+.code-block pre::-webkit-scrollbar-thumb {
+  background: var(--bg-dark-tertiary);
+  border-radius: 4px;
+}
+
+.code-block pre::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
