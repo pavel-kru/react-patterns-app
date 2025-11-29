@@ -1,7 +1,7 @@
 // Netlify Function Example
 // This serverless function can be called from your React app
 
-exports.handler = async (event, context) => {
+exports.handler = async (event, _context) => {
   // Handle CORS
   const headers = {
     'Access-Control-Allow-Origin': '*',
@@ -33,7 +33,7 @@ exports.handler = async (event, context) => {
     // Example: Track pattern view
     if (event.httpMethod === 'POST' && event.path.includes('/track')) {
       const data = JSON.parse(event.body);
-      
+
       // In a real app, you'd save this to a database
       console.log('Pattern viewed:', data.patternId);
 
@@ -50,12 +50,14 @@ exports.handler = async (event, context) => {
       headers,
       body: JSON.stringify({ error: 'Not found' }),
     };
-
   } catch (error) {
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ error: 'Internal server error', details: error.message }),
+      body: JSON.stringify({
+        error: 'Internal server error',
+        details: error.message,
+      }),
     };
   }
 };

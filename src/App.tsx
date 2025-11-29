@@ -16,10 +16,12 @@ function App() {
               <h1>📚 JS Patterns</h1>
             </Link>
             <nav>
-              <button 
+              <button
                 className="theme-toggle"
                 onClick={() => setDarkMode(!darkMode)}
-                aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+                aria-label={
+                  darkMode ? 'Switch to light mode' : 'Switch to dark mode'
+                }
               >
                 {darkMode ? '☀️' : '🌙'}
               </button>

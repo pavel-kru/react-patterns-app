@@ -13,9 +13,7 @@ function CodeBlock({ code }: CodeBlockProps) {
   return (
     <div className="code-block">
       <pre>
-        <code className="language-javascript">
-          {code}
-        </code>
+        <code className="language-javascript">{code}</code>
       </pre>
     </div>
   );

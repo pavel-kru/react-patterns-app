@@ -8,10 +8,12 @@ function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
-  const filteredPatterns = patterns.filter(pattern => {
-    const matchesCategory = selectedCategory === 'All' || pattern.category === selectedCategory;
-    const matchesSearch = pattern.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         pattern.description.toLowerCase().includes(searchTerm.toLowerCase());
+  const filteredPatterns = patterns.filter((pattern) => {
+    const matchesCategory =
+      selectedCategory === 'All' || pattern.category === selectedCategory;
+    const matchesSearch =
+      pattern.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      pattern.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
 
@@ -19,7 +21,10 @@ function HomePage() {
     <div className="home-page">
       <section className="hero">
         <h2>Master JavaScript Patterns</h2>
-        <p>Learn essential JavaScript patterns with interactive examples and clear explanations</p>
+        <p>
+          Learn essential JavaScript patterns with interactive examples and
+          clear explanations
+        </p>
       </section>
 
       <div className="controls">
@@ -34,7 +39,7 @@ function HomePage() {
         </div>
 
         <div className="category-filters">
-          {categories.map(category => (
+          {categories.map((category) => (
             <button
               key={category}
               className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
@@ -48,8 +53,12 @@ function HomePage() {
 
       <div className="patterns-grid">
         {filteredPatterns.length > 0 ? (
-          filteredPatterns.map(pattern => (
-            <Link key={pattern.id} to={`/pattern/${pattern.id}`} className="pattern-link">
+          filteredPatterns.map((pattern) => (
+            <Link
+              key={pattern.id}
+              to={`/pattern/${pattern.id}`}
+              className="pattern-link"
+            >
               <PatternCard pattern={pattern} />
             </Link>
           ))

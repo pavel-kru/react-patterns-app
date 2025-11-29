@@ -8,7 +8,8 @@ export const patterns: Pattern[] = [
     id: 1,
     category: 'Array Methods',
     title: 'Map - Transform Array Elements',
-    description: 'The map() method creates a new array by applying a function to each element.',
+    description:
+      'The map() method creates a new array by applying a function to each element.',
     difficulty: 'beginner',
     code: `// Transform an array of numbers
 const numbers = [1, 2, 3, 4, 5];
@@ -22,14 +23,17 @@ const users = [
 ];
 const names = users.map(user => user.name);
 console.log(names); // ['Alice', 'Bob']`,
-    explanation: 'Map is perfect when you need to transform each element in an array. It always returns a new array of the same length.',
-    useCase: 'Use map when you need to transform data, like converting prices to different currency or extracting specific properties from objects.'
+    explanation:
+      'Map is perfect when you need to transform each element in an array. It always returns a new array of the same length.',
+    useCase:
+      'Use map when you need to transform data, like converting prices to different currency or extracting specific properties from objects.',
   },
   {
     id: 2,
     category: 'Array Methods',
     title: 'Filter - Select Specific Elements',
-    description: 'The filter() method creates a new array with elements that pass a test.',
+    description:
+      'The filter() method creates a new array with elements that pass a test.',
     difficulty: 'beginner',
     code: `// Filter numbers greater than 3
 const numbers = [1, 2, 3, 4, 5, 6];
@@ -44,14 +48,17 @@ const products = [
 ];
 const available = products.filter(p => p.inStock);
 console.log(available); // Returns only in-stock items`,
-    explanation: 'Filter creates a new array containing only elements that pass your test. The new array can be shorter than the original.',
-    useCase: 'Use filter to search, remove unwanted items, or get subsets of data like active users or available products.'
+    explanation:
+      'Filter creates a new array containing only elements that pass your test. The new array can be shorter than the original.',
+    useCase:
+      'Use filter to search, remove unwanted items, or get subsets of data like active users or available products.',
   },
   {
     id: 3,
     category: 'Array Methods',
     title: 'Reduce - Combine Array Elements',
-    description: 'The reduce() method reduces an array to a single value by applying a function.',
+    description:
+      'The reduce() method reduces an array to a single value by applying a function.',
     difficulty: 'intermediate',
     code: `// Sum all numbers
 const numbers = [1, 2, 3, 4, 5];
@@ -77,14 +84,17 @@ const byCity = people.reduce((acc, person) => {
   acc[person.city].push(person);
   return acc;
 }, {});`,
-    explanation: 'Reduce is the most powerful array method. It processes each element and accumulates a result. You provide an initial value and a function that combines the accumulator with each element.',
-    useCase: 'Use reduce for calculations, grouping data, flattening arrays, or any operation that combines array elements into a single result.'
+    explanation:
+      'Reduce is the most powerful array method. It processes each element and accumulates a result. You provide an initial value and a function that combines the accumulator with each element.',
+    useCase:
+      'Use reduce for calculations, grouping data, flattening arrays, or any operation that combines array elements into a single result.',
   },
   {
     id: 4,
     category: 'Async Patterns',
     title: 'Promises - Handle Async Operations',
-    description: 'Promises represent future values and handle asynchronous operations cleanly.',
+    description:
+      'Promises represent future values and handle asynchronous operations cleanly.',
     difficulty: 'intermediate',
     code: `// Basic Promise
 const fetchUser = (id) => {
@@ -113,14 +123,17 @@ fetchUser(1)
   .then(response => response.json())
   .then(posts => console.log('User posts:', posts))
   .catch(error => console.error('Error:', error));`,
-    explanation: 'Promises handle async operations without callback hell. They have three states: pending, fulfilled, or rejected. Use .then() for success and .catch() for errors.',
-    useCase: 'Use promises for API calls, file operations, timers, or any async task. They make async code more readable and maintainable.'
+    explanation:
+      'Promises handle async operations without callback hell. They have three states: pending, fulfilled, or rejected. Use .then() for success and .catch() for errors.',
+    useCase:
+      'Use promises for API calls, file operations, timers, or any async task. They make async code more readable and maintainable.',
   },
   {
     id: 5,
     category: 'Async Patterns',
     title: 'Async/Await - Cleaner Async Code',
-    description: 'Async/await makes asynchronous code look and behave like synchronous code.',
+    description:
+      'Async/await makes asynchronous code look and behave like synchronous code.',
     difficulty: 'intermediate',
     code: `// Basic async function
 async function getUser(id) {
@@ -162,14 +175,17 @@ async function getAllData() {
     console.error('Error fetching data:', error);
   }
 }`,
-    explanation: 'Async/await is syntactic sugar over promises. Use async keyword to define an async function, and await to pause execution until a promise resolves. Always wrap in try/catch for error handling.',
-    useCase: 'Use async/await for cleaner async code, especially when you have multiple sequential async operations. Use Promise.all() for parallel operations.'
+    explanation:
+      'Async/await is syntactic sugar over promises. Use async keyword to define an async function, and await to pause execution until a promise resolves. Always wrap in try/catch for error handling.',
+    useCase:
+      'Use async/await for cleaner async code, especially when you have multiple sequential async operations. Use Promise.all() for parallel operations.',
   },
   {
     id: 6,
     category: 'ES6+ Features',
     title: 'Destructuring - Extract Values Easily',
-    description: 'Destructuring allows unpacking values from arrays or properties from objects.',
+    description:
+      'Destructuring allows unpacking values from arrays or properties from objects.',
     difficulty: 'beginner',
     code: `// Array destructuring
 const colors = ['red', 'green', 'blue'];
@@ -195,14 +211,17 @@ console.log(userName); // 'Alice'
 // Default values
 const { country = 'USA' } = user;
 console.log(country); // 'USA'`,
-    explanation: 'Destructuring extracts values from arrays/objects into separate variables. It makes code cleaner and more readable, especially when working with function parameters or API responses.',
-    useCase: 'Use destructuring for function parameters, extracting data from API responses, or when you need specific properties from objects.'
+    explanation:
+      'Destructuring extracts values from arrays/objects into separate variables. It makes code cleaner and more readable, especially when working with function parameters or API responses.',
+    useCase:
+      'Use destructuring for function parameters, extracting data from API responses, or when you need specific properties from objects.',
   },
   {
     id: 7,
     category: 'ES6+ Features',
     title: 'Spread Operator - Copy and Merge',
-    description: 'The spread operator (...) expands arrays and objects for easy copying and merging.',
+    description:
+      'The spread operator (...) expands arrays and objects for easy copying and merging.',
     difficulty: 'beginner',
     code: `// Copy array
 const original = [1, 2, 3];
@@ -228,14 +247,17 @@ console.log(settings); // { theme: 'dark', language: 'es', fontSize: 14 }
 // Add properties while copying
 const updatedUser = { ...user, age: 26, city: 'NYC' };
 console.log(updatedUser); // { name: 'Alice', age: 26, city: 'NYC' }`,
-    explanation: 'Spread operator creates shallow copies and merges arrays/objects. Later values override earlier ones in object merging.',
-    useCase: 'Use spread for immutable updates in React state, merging configurations, or creating copies without mutation.'
+    explanation:
+      'Spread operator creates shallow copies and merges arrays/objects. Later values override earlier ones in object merging.',
+    useCase:
+      'Use spread for immutable updates in React state, merging configurations, or creating copies without mutation.',
   },
   {
     id: 8,
     category: 'Design Patterns',
     title: 'Module Pattern - Encapsulation',
-    description: 'Module pattern creates private and public members using closures.',
+    description:
+      'Module pattern creates private and public members using closures.',
     difficulty: 'intermediate',
     code: `// Counter module with private state
 const counterModule = (function() {
@@ -275,9 +297,11 @@ counterModule.increment(); // Current count: 2
 console.log(counterModule.getCount()); // 2
 // count is private - can't access directly
 console.log(counterModule.count); // undefined`,
-    explanation: 'Module pattern uses IIFE (Immediately Invoked Function Expression) to create private scope. Only returned methods are accessible from outside.',
-    useCase: 'Use for creating libraries, encapsulating logic, or protecting internal state from external modification.'
-  }
+    explanation:
+      'Module pattern uses IIFE (Immediately Invoked Function Expression) to create private scope. Only returned methods are accessible from outside.',
+    useCase:
+      'Use for creating libraries, encapsulating logic, or protecting internal state from external modification.',
+  },
 ];
 
 export const categories: ('All' | PatternCategory)[] = [
@@ -285,7 +309,7 @@ export const categories: ('All' | PatternCategory)[] = [
   'Array Methods',
   'Async Patterns',
   'ES6+ Features',
-  'Design Patterns'
+  'Design Patterns',
 ];
 
 export default patterns;

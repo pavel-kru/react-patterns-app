@@ -2,10 +2,10 @@
 
 export type DifficultyLevel = 'beginner' | 'intermediate' | 'advanced';
 
-export type PatternCategory = 
-  | 'Array Methods' 
-  | 'Async Patterns' 
-  | 'ES6+ Features' 
+export type PatternCategory =
+  | 'Array Methods'
+  | 'Async Patterns'
+  | 'ES6+ Features'
   | 'Design Patterns';
 
 export interface Pattern {

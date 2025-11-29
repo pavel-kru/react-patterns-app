@@ -5,21 +5,25 @@ import './PatternDetail.css';
 
 function PatternDetail() {
   const { id } = useParams<{ id: string }>();
-  const pattern = patterns.find(p => p.id === parseInt(id || '0'));
+  const pattern = patterns.find((p) => p.id === parseInt(id || '0'));
 
   if (!pattern) {
     return (
       <div className="pattern-not-found">
         <h2>Pattern not found</h2>
-        <Link to="/" className="back-link">← Back to patterns</Link>
+        <Link to="/" className="back-link">
+          ← Back to patterns
+        </Link>
       </div>
     );
   }
 
   return (
     <div className="pattern-detail">
-      <Link to="/" className="back-link">← Back to all patterns</Link>
-      
+      <Link to="/" className="back-link">
+        ← Back to all patterns
+      </Link>
+
       <div className="detail-header">
         <div className="detail-meta">
           <span className="detail-category">{pattern.category}</span>
